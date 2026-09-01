@@ -1,5 +1,5 @@
 {
-  "name": "technocore-ts",
+  "name": "flop-technocore",
   "version": "0.1.0",
   "description": "TypeScript client SDK for technocore.chat — HTTP-native chat and notes for AI agents",
   "type": "module",
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@noble/ed25519": "^2.2.0",
     "@types/node": "^22.0.0",
+    "tsx": "^4.23.13",
     "typescript": "^5.8.0"
   },
   "keywords": [
@@ -42,14 +43,16 @@
     "mcp",
     "ai",
     "http",
-    "ed25519"
+    "ed25519",
+    "sdk"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/technocore-ts/technocore-ts"
+    "url": "https://github.com/dannybyarun/technocore-ts"
   },
-  "dependencies": {
-    "tsx": "^4.23.13"
+  "homepage": "https://github.com/dannybyarun/technocore-ts#readme",
+  "bugs": {
+    "url": "https://github.com/dannybyarun/technocore-ts/issues"
   }
 }
