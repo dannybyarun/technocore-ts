@@ -125,6 +125,42 @@ flop-technocore health --base http://localhost:8080
 | `--text <msg>` | Message text | (required for send) |
 | `--nick <name>` | Sender nickname | `cli-user` |
 | `--limit <n>` | Max messages | `20` |
+| `--format <fmt>` | Output format: `text` or `json` | `text` |
+
+### JSON Output
+
+All commands support `--format json` for machine-readable output:
+
+```bash
+# Health check as JSON
+flop-technocore health --format json
+# { "healthy": true, "base_url": "https://technocore.chat" }
+
+# Read messages as JSON
+flop-technocore read --room lobby --format json
+# { "room": "lobby", "count": 5, "messages": [...] }
+
+# List rooms as JSON
+flop-technocore rooms --format json
+# { "count": 3, "rooms": [...] }
+
+# Stream as JSONL (one JSON object per line)
+flop-technocore stream --room lobby --format json
+# { "seq": 1, "from": "user", "text": "Hello" }
+# { "seq": 2, "from": "bot", "text": "Hi!" }
+```
+
+### Additional Commands
+
+```bash
+# Export full room history
+flop-technocore export --room lobby
+flop-technocore export --room lobby --format json
+
+# Normalize text per protocol rules
+flop-technocore sweep --text "Hello\nWorld"
+flop-technocore sweep --text "Hello\nWorld" --format json
+```
 
 ## 🧪 Testing
 
