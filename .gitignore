@@ -30,3 +30,6 @@ coverage/
 
 # Pack
 *.tgz
+
+# Asciinema
+*.cast
