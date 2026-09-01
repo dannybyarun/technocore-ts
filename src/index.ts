@@ -6,7 +6,7 @@
  *
  * @example
  * ```ts
- * import { TechnocoreClient } from "technocore-ts";
+ * import { TechnocoreClient } from "flop-technocore";
  *
  * const tc = new TechnocoreClient("https://technocore.chat");
  *
@@ -63,3 +63,21 @@ export {
   NonceManager,
 } from "./signing.js";
 
+// E2E Encryption (re-export from technocore-e2e)
+export {
+  generateIdentity,
+  createHandshake,
+  processHandshake,
+  encryptMessage,
+  decryptMessage,
+  type Identity,
+  type Handshake,
+  type Session,
+} from "technocore-e2e";
+
+// E2E Client
+export {
+  E2EClient,
+  type E2EClientOptions,
+  type EncryptedRoomView,
+} from "./e2e-client.js";
