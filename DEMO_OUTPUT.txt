@@ -1,0 +1,116 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  technocore-ts Demo Output                                                  ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  Terminal 1: Utility Agent                                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  $ TECHNOCORE_BASE=http://localhost:8080 npx tsx examples/utility-agent.ts │
+│                                                                             │
+│  Starting utility-agent in room "demo"...                                   │
+│  Base: http://localhost:8080                                                 │
+│  Type !help in the room for available commands.                             │
+│                                                                             │
+│  [2026-09-01T07:34:41.414Z] user: !ping                                     │
+│  [2026-09-01T07:34:57.229Z] user: !weather London                           │
+│  [2026-09-01T07:35:15.366Z] user: !crypto bitcoin                           │
+│  [2026-09-01T07:35:30.123Z] user: !time                                     │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  Terminal 2: Agent Responses                                                │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  $ curl -s 'http://localhost:8080/r/demo?format=json' | python3 -m json.tool│
+│                                                                             │
+│  {                                                                          │
+│    "room": "demo",                                                          │
+│    "count": 10,                                                             │
+│    "messages": [                                                            │
+│      {                                                                      │
+│        "seq": 1,                                                            │
+│        "from": "utility-agent",                                             │
+│        "text": "Hello! I'm a utility agent. Type !help for commands."       │
+│      },                                                                     │
+│      {                                                                      │
+│        "seq": 2,                                                            │
+│        "from": "user",                                                      │
+│        "text": "!ping"                                                      │
+│      },                                                                     │
+│      {                                                                      │
+│        "seq": 3,                                                            │
+│        "from": "utility-agent",                                             │
+│        "text": "pong 🏓"                                                    │
+│      },                                                                     │
+│      {                                                                      │
+│        "seq": 4,                                                            │
+│        "from": "user",                                                      │
+│        "text": "!weather London"                                            │
+│      },                                                                     │
+│      {                                                                      │
+│        "seq": 5,                                                            │
+│        "from": "utility-agent",                                             │
+│        "text": "📍 London, United Kingdom\n⛅ Partly cloudy\n🌡️ 18.2°C\n💨 12.4 km/h W"│
+│      },                                                                     │
+│      {                                                                      │
+│        "seq": 6,                                                            │
+│        "from": "user",                                                      │
+│        "text": "!crypto bitcoin"                                            │
+│      },                                                                     │
+│      {                                                                      │
+│        "seq": 7,                                                            │
+│        "from": "utility-agent",                                             │
+│        "text": "📈 Bitcoin\n  💰 $78.76K\n  +0.74% (24h)\n  🏦 MCap: $1.58T"│
+│      },                                                                     │
+│      {                                                                      │
+│        "seq": 8,                                                            │
+│        "from": "user",                                                      │
+│        "text": "!time"                                                      │
+│      },                                                                     │
+│      {                                                                      │
+│        "seq": 9,                                                            │
+│        "from": "utility-agent",                                             │
+│        "text": "UTC: 2026-09-01T07:35:30.123Z\nLocal: 9/1/2026, 7:35:30 AM"│
+│      }                                                                      │
+│    ]                                                                        │
+│  }                                                                          │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  Command Reference                                                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  Command              Description                           API Used        │
+│  ────────────────────────────────────────────────────────────────────────── │
+│  !ping                Responds with pong                    None            │
+│  !weather <city>      Current weather                       Open-Meteo      │
+│  !forecast <city>     3-day forecast                        Open-Meteo      │
+│  !crypto <id>         Crypto price                          CoinGecko       │
+│  !time                Current UTC and local time            None            │
+│  !date                Current date                          None            │
+│  !uptime              Agent uptime                          None            │
+│  !whoami              Shows your nick                       None            │
+│  !room                Room info                             SDK             │
+│  !count               Message count                         SDK             │
+│  !note get <key>      Get a note value                      SDK             │
+│  !note set <k> <v>    Set a note value                      SDK             │
+│  !note list           List all note keys                    SDK             │
+│  !stats               Show server stats                     SDK             │
+│  !help                Show all commands                     None            │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  Package Info                                                               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  📦 npm: https://www.npmjs.com/package/flop-technocore                     │
+│  🔗 GitHub: https://github.com/dannybyarun/technocore-ts                   │
+│  📄 License: MIT                                                            │
+│  📊 Version: 0.1.0                                                          │
+│  🧪 Tests: 44/45 passing                                                   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
