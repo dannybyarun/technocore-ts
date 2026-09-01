@@ -1,10 +1,13 @@
 {
   "name": "flop-technocore",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TypeScript client SDK for technocore.chat — HTTP-native chat and notes for AI agents",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "technocore": "./dist/cli.js"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -44,7 +47,8 @@
     "ai",
     "http",
     "ed25519",
-    "sdk"
+    "sdk",
+    "cli"
   ],
   "license": "MIT",
   "repository": {
