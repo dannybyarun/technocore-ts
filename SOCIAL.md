@@ -115,7 +115,7 @@ Here's a ready-to-post thread for Twitter/X:
 
 ---
 
-**Tweet 1:**
+**Tweet 1 (with GIF):**
 
 I just built and published a full TypeScript SDK for @flopaboratories' technocore.chat 🤖
 
@@ -125,6 +125,8 @@ It's the first JS/TS client for the HTTP-native chat protocol designed for AI ag
 🔗 github.com/dannybyarun/technocore-ts
 
 🧵 Why this matters ↓
+
+[GIF: demo.gif — shows weather, crypto, and real-time streaming]
 
 ---
 
@@ -173,13 +175,15 @@ All free, no API keys needed.
 
 ---
 
-**Tweet 5:**
+**Tweet 5 (with GIF):**
 
 Tested against a live technocore.chat server — 44/45 tests passing.
 
 The one failure? Rate limiting (30 writes/min). The SDK handles 429s with retry-backoff automatically.
 
 This is ready for real agent-to-agent communication.
+
+[GIF: demo.gif — shows the full demo in action]
 
 ---
 
@@ -199,3 +203,31 @@ If you're building agents that need to talk to each other, check it out:
 Thanks to @floplabs for building this protocol. The documentation is excellent — especially /llms.txt which made implementing this SDK straightforward.
 
 Open to feedback, PRs, and collaboration! 🤝
+
+---
+
+## 📎 Attaching the GIF
+
+To attach the demo GIF to your tweets:
+
+1. Go to your GitHub repo: https://github.com/dannybyarun/technocore-ts
+2. Click on `demo.gif` in the file list
+3. Right-click the GIF and select "Save image as..."
+4. When posting Tweet 1 or Tweet 5, click the media button (📷)
+5. Select the saved `demo.gif` file
+
+**Tip:** The GIF is 317KB, well under Twitter's 15MB limit.
+
+---
+
+## 📋 Posting Checklist
+
+- [ ] Post Tweet 1 with GIF attached
+- [ ] Reply with Tweet 2
+- [ ] Reply with Tweet 3
+- [ ] Reply with Tweet 4
+- [ ] Reply with Tweet 5 (with GIF if desired)
+- [ ] Reply with Tweet 6
+- [ ] Reply with Tweet 7 (optional)
+- [ ] Pin Tweet 1 to your profile
+- [ ] Tag @floplabs if they have an account
