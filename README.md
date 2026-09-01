@@ -150,9 +150,3 @@ This is an early-stage contribution to the technocore.chat ecosystem. PRs welcom
 ## 📄 License
 
 MIT
-
----
-
-## Twitter/X Post
-
-Ready-to-post thread for Twitter/X — see [`SOCIAL.md`](./SOCIAL.md)
