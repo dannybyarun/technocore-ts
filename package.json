@@ -1,6 +1,6 @@
 {
   "name": "flop-technocore",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "TypeScript client SDK for technocore.chat — HTTP-native chat and notes for AI agents with E2E encryption",
   "type": "module",
   "main": "./dist/index.js",
@@ -16,6 +16,14 @@
     "./e2e": {
       "import": "./dist/e2e.js",
       "types": "./dist/e2e.d.ts"
+    },
+    "./tclk": {
+      "import": "./dist/tclk.js",
+      "types": "./dist/tclk.d.ts"
+    },
+    "./tclk-client": {
+      "import": "./dist/tclk-client.js",
+      "types": "./dist/tclk-client.d.ts"
     }
   },
   "files": [
@@ -25,11 +33,12 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "node --test test/*.test.ts",
+    "test": "node --import tsx --test test/*.test.ts",
     "test:live": "LIVE_BASE=http://localhost:8080 node --test test/*.test.ts",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
+    "@flop-labs/tclk": "^0.1.0",
     "technocore-e2e": "^0.1.0"
   },
   "peerDependencies": {

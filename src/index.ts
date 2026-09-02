@@ -81,3 +81,25 @@ export {
   type E2EClientOptions,
   type EncryptedRoomView,
 } from "./e2e-client.js";
+
+// tclk (Technocore Lock Protocol) — HTLC/PTLC deal coordination
+export {
+  TclkClient,
+  type TclkDealManager,
+} from "./tclk-client.js";
+
+export {
+  createHashLock,
+  createOffer,
+  acceptOffer,
+  encodeFrameForPost,
+  startContract,
+  updateContract,
+  isTerminal,
+  getContractStatus,
+  type TclkDeal,
+  type CreateOfferParams,
+  type AcceptOfferParams,
+  type Frame,
+  type ContractState,
+} from "./tclk.js";
